@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="trix.css">
+  <script type="text/javascript" src="trix.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <trix-editor></trix-editor>
+  <button id="log">Add data, click me and check console</button>
+  <script type="text/javascript">
+    var element = document.querySelector("trix-editor")
+    document.getElementById("log").addEventListener("click", function() {
+      console.log(JSON.stringify(element.editor, null, 2));
+    }); 
+  </script>
+</body>
+</html>
